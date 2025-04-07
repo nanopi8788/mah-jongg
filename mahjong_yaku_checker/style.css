@@ -1,0 +1,16 @@
+.tile {
+  width: 60px;
+  height: auto;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.tile:hover {
+  transform: scale(1.1);
+}
+
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
