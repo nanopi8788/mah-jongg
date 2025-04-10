@@ -44,9 +44,22 @@ tiles.forEach(tile => {
     const yakus = tileYakuMap[tileValue] || [];
 
     yakuList.innerHTML = "";
+    
+    if (yakus.length === 0) {
+      const li = document.createElement("li");
+      li.textContent = "対応する役はありません。";
+      yakuList.appendChild(li);
+      return;
+    }
+
     yakus.forEach(yaku => {
       const li = document.createElement("li");
-      li.textContent = yaku;
+      const img = document.createElement("img");
+      img.src = `yaku_images/${yaku}.png`; // ← ここに画像を入れる
+      img.alt = yaku;
+      img.style.height = "60px"; // 表示サイズ調整
+      img.style.margin = "5px";
+      li.appendChild(img);
       yakuList.appendChild(li);
     });
   });
