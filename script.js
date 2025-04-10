@@ -1,5 +1,5 @@
 const tileYakuMap = {
-  "1m": ["1m 1m", ""],
+  "1m": ["pinfu", "riichi"],
   "2m": ["", ""],
   "3m": ["", ""],
   "4m": ["", ""],
